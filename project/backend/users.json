@@ -1,0 +1,9 @@
+[
+  {
+    "ID": 0,
+    "username": "elias",
+    "password": "1233",
+    "confirmpasswordlabel": "1234",
+    "role": "Admin"
+  }
+]
