@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+}
+
+:root{
+    --dark-purple: #9381ff;
+    --light-pruple:#b8b8;
+    --off-white:#f8f7ff;
+    --beige:#ffeedd;
+    --grey:rgb(139, 136, 136);
+    --font:"Outfit", sans-serif;
+
+}
+
+.main{
+    width: 70vw;
+    height: 85vh;
+    transform: translateX(20%)translateY(10%);
+    display: flex;
+    box-shadow: 3px 6px 20px var(--grey);
+}
+
+.subdiv{
+    width: 50%;
+    height: 100%;
+    border: 0px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subdiv:nth-child(1){
+    background: linear-gradient(to bottom right,var(--dark-purple),var(--light-pruple),var(--beige));
+}
+
+#welcomeh1{
+    color: var(--off-white);
+    font-size: 80px;
+    transform: translateX(-1vw)translateY(3vh);
+}
+
+form{
+    border: 0px solid;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    height: 70%;
+    
+}
+
+a{
+    text-decoration: none;
+    color: rgb(139, 136, 136);
+    transition: .2s;
+    position: fixed;
+    bottom: 0;
+    transform: translateY(-3vh);
+}
+
+a span{
+    text-decoration: underline;
+    color: #9381ff;
+    transition: .2s;
+}
+
+a span:hover{
+    color: black;
+}
+
+label{
+    color: var(--grey) ;
+    transform: translateX(-7.5vw);
+}
+
+input{
+    padding: 10px;
+    width: 75%;
+}
+
+input:focus{
+    outline: none;
+}
+
+#username{
+    transform: translateY(11vh)
+}
+
+#password{
+    transform: translateY(17vh);
+}
+#usernamelabel{
+    transform: translateY(10vh)translateX(-7.5vw);
+}
+
+#passwordlabel{
+    transform: translateY(16vh)translateX(-7.5vw);
+}
+
+button{
+    position: fixed;
+    bottom: 0;
+    transform: translateY(-15vh);
+    background-color: var(--dark-purple);
+    color: white;
+    padding: 5px;
+    padding: 15px;
+    width: 28.5%;
+    border-width: 0px;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: .2s;
+}
+
+button:hover{
+    background-color: black;
+}
+
+h1{
+    color: black;
+    transform: translateX(-7.5vw)translateY(3vh);
+}
+
+p{
+    position: absolute;
+    color: var(--grey);
+    font-size: 13px;
+    transform: translateY(14vh)translateX(-.8vw);
+
+}
+
+
+

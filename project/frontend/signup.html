@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/signup.css">
+</head>
+<body>
+
+    <div class="main">
+
+
+        <div class="subdiv">
+            <h1 id="welcomeh1">Join<br>Us!</h1>
+        </div>
+
+
+        <div class="subdiv">
+
+            <h1>Sign up</h1>
+            <p>Join us! Take advantage of the endless possibilities.</p>
+
+            <form action="/signup" method="post">
+                <label for="username" id="usernamelabel">Username</label>
+                <input required type="text" name="username" id="username">
+
+                <label for="password" id="passwordlabel">Password</label>
+                <input required type="password" name="password" id="password">
+
+                <label for="password" id="confirmpasswordlabel">Confirm Password</label>
+                <input required type="password" name="confirmpasswordlabel" id="confirmpassword">
+
+                <div class="rolediv">
+                    <select name="role" id="roleselect" required>
+                        <option value="None" id="role-placeholder">Select Role</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Staff">Staff</option>
+                    </select>
+                </div>
+
+                <button type="submit">Sign up</button>
+
+            </form>
+
+            <a href="index.html">Already have an account? <span>Login</span></a>
+
+        </div>
+
+
+    </div>
+
+    
+</body>
+</html>

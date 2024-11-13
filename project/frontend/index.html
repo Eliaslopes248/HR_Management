@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/login.css">
 </head>
 <body>
 
-    frontend
+    <div class="main">
+
+
+        <div class="subdiv">
+            <h1 id="welcomeh1">Welcome <br>Back!</h1>
+        </div>
+
+
+        <div class="subdiv">
+
+            <h1>Login</h1>
+            <p>Welcome back to the HR managemant app! <br> Enjoy our services.</p>
+
+            <form action="/login" method="post">
+                <label for="username" id="usernamelabel">Username</label>
+                <input type="text" name="username" id="username">
+
+                <label for="password" id="passwordlabel">Password</label>
+                <input type="password" name="password" id="password">
+
+                <button type="submit">Login</button>
+
+            </form>
+
+            <a href="signup.html">New user? <span>Sign up</span></a>
+
+        </div>
+
+
+    </div>
+
     
 </body>
 </html>
