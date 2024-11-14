@@ -4,6 +4,7 @@ const fs = require('fs');
 const bodyparser = require('body-parser');
 const path = require('path');
 
+
 // Port running server
 const port = 3000;
 // App instance
@@ -57,8 +58,9 @@ function handle_signup(entry) {
       fs.writeFileSync(filePath, JSON.stringify(temp_db, null, 2), 'utf-8');
       console.log('New user created:', entry.username);
 
-      return STATUS;
+      password_passes = false
     }
+    return STATUS;
 }
 
 // Define POST route for signup
