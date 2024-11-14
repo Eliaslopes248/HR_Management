@@ -31,25 +31,34 @@ function handle_signup(entry) {
     temp_db = JSON.parse(filedata);
   }
 
-  let newID = temp_db.length;
+  let newID = temp_db.length+1;
+  let password_passes = false;
   entry = {
     ID: newID,
-    ...entry
+    ...entry,
+    organizations:[]
   };
 
-  let entryExists = temp_db.some(user => user.ID === entry.ID || user.username === entry.username);
-
-  if (!entryExists) {
-    temp_db.push(entry);
-    STATUS = true;
-  } else {
-    console.error("Couldn't sign up with those credentials");
+  if(entry.password == entry.confirmpasswordlabel){
+    password_passes = true
   }
 
-  fs.writeFileSync(filePath, JSON.stringify(temp_db, null, 2), 'utf-8');
-  console.log('New user created:', entry.username);
+  while(password_passes){
 
-  return STATUS;
+        let entryExists = temp_db.some(user => user.ID === entry.ID || user.username === entry.username);
+
+      if (!entryExists) {
+        temp_db.push(entry);
+        STATUS = true;
+      } else {
+        console.error("Couldn't sign up with those credentials");
+      }
+
+      fs.writeFileSync(filePath, JSON.stringify(temp_db, null, 2), 'utf-8');
+      console.log('New user created:', entry.username);
+
+      return STATUS;
+    }
 }
 
 // Define POST route for signup
