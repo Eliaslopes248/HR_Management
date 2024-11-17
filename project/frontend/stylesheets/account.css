@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    
+}
+
+:root{
+    --dark-purple: #9381ff;
+    --light-pruple:#b8b8;
+    --off-white:#f8f7ff;
+    --beige:#ffeedd;
+    --font:"Outfit", sans-serif;
+}
+

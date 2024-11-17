@@ -3,7 +3,8 @@ const express = require('express');
 const fs = require('fs');
 const bodyparser = require('body-parser');
 const path = require('path');
-const {signup,login} = require('./functions/signup_logic')
+const {handle_signup,handle_login} = require('./functions/signup_logic')
+const {displayOrgs,addOrg,removeOrg} = require("./functions/accountpage")
 
 // Port running server
 const port = 3000;
@@ -26,8 +27,8 @@ app.get('/', (req, res) => {
 app.post('/signup', (req, res) => {
   let formData = req.body;
 
-  if (signup(formData)) {
-    res.send('Signed up successfully');
+  if (handle_signup(formData)) {
+    res.redirect('account.html');
     //hi(formData)
   } else {
     res.send('ERROR!');
@@ -39,8 +40,17 @@ app.post('/login',(req,res)=>{
 
   let filedata = req.body;
 
-  if(login(filedata)){
-    res.send('Logged in!')
+  if(handle_login(filedata)){
+    res.redirect('account.html')
+    
+
+    //FIXME HAVE FRONT END FETCH REQUEST THE USERS DATA FROM ACCOUNTPAGE.JS
+      app.get('/vieworgs',(req,res)=>{
+        //send data in JSON format 
+          res.json(displayOrgs(filedata))
+      })
+
+
   }else{
     res.send("ERROR!")
   }

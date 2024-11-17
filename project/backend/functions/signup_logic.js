@@ -4,7 +4,7 @@ const path = require('path');
 //signup logic
 function handle_signup(entry) {
     let STATUS = false;
-    const filePath = path.join(__dirname, 'users.json');
+    const filePath = path.join(__dirname, '..','users.json');
     let temp_db = [];
   
     if (fs.existsSync(filePath)) {
@@ -47,20 +47,19 @@ function handle_signup(entry) {
   function handle_login(entry){
     
     //vars and paths
-    let STATUS = false;
-    const filePath = path.join(__dirname, 'users.json');
+    const filePath = path.join(__dirname, '..','users.json');
     let temp_db = [];
 
     //read file
     if(fs.existsSync(filePath)){
         let filedata = fs.readFileSync(filePath,'utf-8')
-        temp_db = JSON.parse(filePath)
+        temp_db = JSON.parse(filedata)
     }
 
     //loop through database
     let entryExists = temp_db.some(user => user.password === entry.password || user.username === entry.username);
 
-    if(STATUS){
+    if(entryExists){
         return true
     }
   }
