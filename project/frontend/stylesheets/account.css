@@ -3,7 +3,7 @@
 body{
     padding: 0;
     margin: 0;
-    
+    background: linear-gradient(to left, var(--dark-purple),var(--beige));
 }
 
 :root{
@@ -12,5 +12,166 @@ body{
     --off-white:#f8f7ff;
     --beige:#ffeedd;
     --font:"Outfit", sans-serif;
+    --grey:rgb(139, 136, 136);
+    --widget-color:  hsl(249, 100%, 75%,.2);
 }
 
+.app{
+    background-color: var(--off-white);
+    width: 80%;
+    height: 90vh;
+    transform: translateX(10vw)translateY(0vh);
+    box-shadow: 2px 5px 15px rgb(81, 81, 81);
+    border-radius: 20px;
+}
+
+#user-name{
+    font-family: var(--font);
+    font-size: 50px;
+    margin-left: 20px;
+    transform: translateY(5vh);
+}
+
+#user-role{
+    font-family: var(--font);
+    font-size: 20px;
+    margin-left: 20px;
+    color: var(--grey);
+    font-weight: 400;
+    transform: translateY(0vh);
+}
+
+#user-img{
+    border: 0px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    transform: translateX(26vw)translateY(2vh);
+    border-radius: 50%;
+    background-color: var(--widget-color);
+    box-shadow: 1px 2px 5px var(--grey);
+}
+
+#upload-img-btn{
+    transition: .3s;
+    padding: 10px;
+    font-family: var(--font);
+    background-color: var(--off-white);
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#upload-img-btn:hover{
+    box-shadow: 1px 2px 5px var(--grey);
+    margin-bottom: 2vh;
+}
+
+
+#org-holder{
+    width: 50%;
+    height: 30vh;
+    border: 0px solid;
+    position: fixed;
+    bottom: 0;
+    transform: translateX(21vw)translateY(-3vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--widget-color);
+    box-shadow: 1px 2px 5px var(--grey);
+}
+
+#add-org-button{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 1px solid;
+    background-color: var(--off-white);
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#add-org-button:hover{
+    margin-bottom: 2vh;
+    box-shadow: 2px 2px 3px var(--grey);
+
+}
+
+.side-panel{
+    width: 220px;
+    height: 340px;
+    border: 0px solid;
+    margin-left: 20px;
+    border-radius: 20px;
+    background-color: var(--widget-color);
+    box-shadow: 1px 2px 5px var(--grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.panel-blocks{
+    width: 90%;
+    height: 60px;
+    border: 1px solid;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font);
+    background-color: var(--off-white);
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.panel-blocks:hover{
+    margin-bottom: 2vh;
+    box-shadow: 1px 2px 5px var(--grey);
+}
+
+.panel-blocks a{
+    color: red;
+    text-decoration: none;
+    font-family: var(--font);
+}
+
+#add-org-button svg{
+    width: 70%;
+    height: 70%;
+}
+
+#plus-icon{
+    fill: var(--dark-purple);
+
+}
+
+.account-info-widget{
+    width: 300px;
+    height: 280px;
+    border: 0px solid;
+    position: absolute;
+    border-radius: 20px;
+    transform: translateY(-85vh)translateX(54vw);
+    background-color: var(--widget-color);
+    box-shadow: 1px 2px 5px var(--grey);
+}
+
+.slider-div{
+    width: 200px;
+    height: 30vh;
+    background-color: var(--widget-color);
+    transform: translateY(-30.5vh)translateX(62vw);
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px var(--grey);
+}

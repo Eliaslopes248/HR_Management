@@ -11,8 +11,14 @@ async function getUserData() {
     }
 }
 
+let user;
+
 //runs this function of load up of the page
 document.addEventListener('DOMContentLoaded', async () => {
-    const orgs = await getUserData();
-    console.log('Fetched Organizations:', orgs);
+    user = await getUserData();
+    console.log('Fetched Organizations:', user);
+
+    
+    document.getElementById("name-here").textContent = user.username;
 });
+
